@@ -1,0 +1,2878 @@
+{
+  "sourceUrl": "https://script.google.com/macros/s/AKfycby7Y33892sNwrl4sAZ6vOXjw2L72oRiAQsa-4IgdalGmVqxuXwXXIzlWHkpljI4DA7Q/exec",
+  "sourceDate": "2026-10-17",
+  "sourceRows": 204,
+  "words": [
+    {
+      "id": "efficient",
+      "word": "efficient",
+      "meaning": "효율적인/효과적인",
+      "days": [
+        "DAY1",
+        "DAY5",
+        "DAY6"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "efficient",
+          "meaning": "효율적인/효과적인"
+        },
+        {
+          "day": "DAY5",
+          "word": "efficient",
+          "meaning": "효율적인"
+        },
+        {
+          "day": "DAY6",
+          "word": "efficient",
+          "meaning": "효율적인"
+        }
+      ]
+    },
+    {
+      "id": "additional",
+      "word": "additional",
+      "meaning": "추가적인/추가의",
+      "days": [
+        "DAY1",
+        "DAY5",
+        "DAY6"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "additional",
+          "meaning": "추가적인/추가의"
+        },
+        {
+          "day": "DAY5",
+          "word": "additional",
+          "meaning": "추가적인"
+        },
+        {
+          "day": "DAY6",
+          "word": "additional",
+          "meaning": "추가적인"
+        }
+      ]
+    },
+    {
+      "id": "temporarily",
+      "word": "temporarily",
+      "meaning": "잠시/일시적으로",
+      "days": [
+        "DAY1",
+        "DAY5",
+        "DAY6"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "temporarily",
+          "meaning": "잠시/일시적으로"
+        },
+        {
+          "day": "DAY5",
+          "word": "temporarily",
+          "meaning": "임시적으로"
+        },
+        {
+          "day": "DAY6",
+          "word": "temporarily",
+          "meaning": "임시적으로"
+        }
+      ]
+    },
+    {
+      "id": "applicant",
+      "word": "applicant",
+      "meaning": "지원자",
+      "days": [
+        "DAY1",
+        "DAY5",
+        "DAY6"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "applicant",
+          "meaning": "지원자"
+        },
+        {
+          "day": "DAY5",
+          "word": "applicant",
+          "meaning": "지원"
+        },
+        {
+          "day": "DAY6",
+          "word": "applicant",
+          "meaning": "지원"
+        }
+      ]
+    },
+    {
+      "id": "accommodate",
+      "word": "accommodate",
+      "meaning": "수용하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "accommodate",
+          "meaning": "수용하다"
+        }
+      ]
+    },
+    {
+      "id": "adjacent",
+      "word": "adjacent",
+      "meaning": "인접한",
+      "days": [
+        "DAY1",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "adjacent",
+          "meaning": "인접한"
+        },
+        {
+          "day": "DAY4",
+          "word": "adjacent",
+          "meaning": "인접한"
+        }
+      ]
+    },
+    {
+      "id": "allocate",
+      "word": "allocate",
+      "meaning": "할당하다",
+      "days": [
+        "DAY1",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "allocate",
+          "meaning": "할당하"
+        },
+        {
+          "day": "DAY4",
+          "word": "allocate",
+          "meaning": "할당하다"
+        }
+      ]
+    },
+    {
+      "id": "authorize",
+      "word": "authorize",
+      "meaning": "승인하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "authorize",
+          "meaning": "승인하다"
+        }
+      ]
+    },
+    {
+      "id": "comprehensive",
+      "word": "comprehensive",
+      "meaning": "종합적인",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "comprehensive",
+          "meaning": "종합적인"
+        }
+      ]
+    },
+    {
+      "id": "contingent",
+      "word": "contingent",
+      "meaning": "~에 달려 있는",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "contingent",
+          "meaning": "~에 달려 있는"
+        }
+      ]
+    },
+    {
+      "id": "compelling",
+      "word": "compelling",
+      "meaning": "설득력 있는",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "compelling",
+          "meaning": "설득력 있는"
+        }
+      ]
+    },
+    {
+      "id": "compatible",
+      "word": "compatible",
+      "meaning": "호환되는",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "compatible",
+          "meaning": "호환되는"
+        }
+      ]
+    },
+    {
+      "id": "confidential",
+      "word": "confidential",
+      "meaning": "기밀의",
+      "days": [
+        "DAY1",
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "confidential",
+          "meaning": "기밀의"
+        },
+        {
+          "day": "DAY2",
+          "word": "confidential",
+          "meaning": "기밀의"
+        }
+      ]
+    },
+    {
+      "id": "consent",
+      "word": "consent",
+      "meaning": "동의",
+      "days": [
+        "DAY1",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "consent",
+          "meaning": "동의"
+        },
+        {
+          "day": "DAY4",
+          "word": "consent",
+          "meaning": "동의"
+        }
+      ]
+    },
+    {
+      "id": "defective",
+      "word": "defective",
+      "meaning": "결함이 있는",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "defective",
+          "meaning": "결함이 있는"
+        }
+      ]
+    },
+    {
+      "id": "designate",
+      "word": "designate",
+      "meaning": "지정하다",
+      "days": [
+        "DAY1",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "designate",
+          "meaning": "지정하다"
+        },
+        {
+          "day": "DAY4",
+          "word": "designate",
+          "meaning": "지정하다"
+        }
+      ]
+    },
+    {
+      "id": "deteriorate",
+      "word": "deteriorate",
+      "meaning": "악화되다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "deteriorate",
+          "meaning": "악화되다"
+        }
+      ]
+    },
+    {
+      "id": "eligible",
+      "word": "eligible",
+      "meaning": "자격이 있는",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "eligible",
+          "meaning": "자격이 있는"
+        }
+      ]
+    },
+    {
+      "id": "endorse",
+      "word": "endorse",
+      "meaning": "지지하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "endorse",
+          "meaning": "지지하다"
+        }
+      ]
+    },
+    {
+      "id": "entail",
+      "word": "entail",
+      "meaning": "수반하다",
+      "days": [
+        "DAY1",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "entail",
+          "meaning": "수반하다"
+        },
+        {
+          "day": "DAY4",
+          "word": "entail",
+          "meaning": "수반하다"
+        }
+      ]
+    },
+    {
+      "id": "expedite",
+      "word": "expedite",
+      "meaning": "신속히 처리하다",
+      "days": [
+        "DAY1",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "expedite",
+          "meaning": "신속히 처리하다"
+        },
+        {
+          "day": "DAY4",
+          "word": "expedite",
+          "meaning": "신속히 처리하다"
+        }
+      ]
+    },
+    {
+      "id": "feasible",
+      "word": "feasible",
+      "meaning": "실행 가능한",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "feasible",
+          "meaning": "실행 가능"
+        }
+      ]
+    },
+    {
+      "id": "impose",
+      "word": "impose",
+      "meaning": "부과하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "impose",
+          "meaning": "부과하다"
+        }
+      ]
+    },
+    {
+      "id": "mandatory",
+      "word": "mandatory",
+      "meaning": "의무적인",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "mandatory",
+          "meaning": "의무적인"
+        }
+      ]
+    },
+    {
+      "id": "obsolete",
+      "word": "obsolete",
+      "meaning": "구식의",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "obsolete",
+          "meaning": "구식의"
+        }
+      ]
+    },
+    {
+      "id": "preliminary",
+      "word": "preliminary",
+      "meaning": "예비의",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "preliminary",
+          "meaning": "예비의"
+        }
+      ]
+    },
+    {
+      "id": "prospective",
+      "word": "prospective",
+      "meaning": "잠재적인",
+      "days": [
+        "DAY1",
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "prospective",
+          "meaning": "잠재적인"
+        },
+        {
+          "day": "DAY2",
+          "word": "prospective",
+          "meaning": "잠재적인, 장래의"
+        }
+      ]
+    },
+    {
+      "id": "respective",
+      "word": "respective",
+      "meaning": "각각의",
+      "days": [
+        "DAY1",
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "respective",
+          "meaning": "각각의"
+        },
+        {
+          "day": "DAY2",
+          "word": "respective",
+          "meaning": "각각의"
+        }
+      ]
+    },
+    {
+      "id": "retrieve",
+      "word": "retrieve",
+      "meaning": "회수하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "retrieve",
+          "meaning": "회수하다"
+        }
+      ]
+    },
+    {
+      "id": "subsequent",
+      "word": "subsequent",
+      "meaning": "이후의",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "subsequent",
+          "meaning": "이후의"
+        }
+      ]
+    },
+    {
+      "id": "undergo",
+      "word": "undergo",
+      "meaning": "겪다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "undergo",
+          "meaning": "겪다"
+        }
+      ]
+    },
+    {
+      "id": "waive",
+      "word": "waive",
+      "meaning": "면제하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "waive",
+          "meaning": "면제하다"
+        }
+      ]
+    },
+    {
+      "id": "unanimously",
+      "word": "unanimously",
+      "meaning": "만장일치로",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "unanimously",
+          "meaning": "만장일치로"
+        }
+      ]
+    },
+    {
+      "id": "periodically",
+      "word": "periodically",
+      "meaning": "주기적으로",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "periodically",
+          "meaning": "주기적으로"
+        }
+      ]
+    },
+    {
+      "id": "increasingly",
+      "word": "increasingly",
+      "meaning": "점점",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "increasingly",
+          "meaning": "점점"
+        }
+      ]
+    },
+    {
+      "id": "exclusively",
+      "word": "exclusively",
+      "meaning": "독점적으로",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "exclusively",
+          "meaning": "독점적으로"
+        }
+      ]
+    },
+    {
+      "id": "deliberately",
+      "word": "deliberately",
+      "meaning": "신중하게",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "deliberately",
+          "meaning": "신중하게"
+        }
+      ]
+    },
+    {
+      "id": "thoroughly",
+      "word": "thoroughly",
+      "meaning": "철저하게",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "thoroughly",
+          "meaning": "철저하게"
+        }
+      ]
+    },
+    {
+      "id": "readily",
+      "word": "readily",
+      "meaning": "손쉽게",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "readily",
+          "meaning": "손쉽게"
+        }
+      ]
+    },
+    {
+      "id": "assess",
+      "word": "assess",
+      "meaning": "평가하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "assess",
+          "meaning": "평가하다"
+        }
+      ]
+    },
+    {
+      "id": "attain",
+      "word": "attain",
+      "meaning": "달성하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "attain",
+          "meaning": "달성하다"
+        }
+      ]
+    },
+    {
+      "id": "attribute",
+      "word": "attribute",
+      "meaning": "덕으로 돌리다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "attribute",
+          "meaning": "덕으로 돌리다"
+        }
+      ]
+    },
+    {
+      "id": "commence",
+      "word": "commence",
+      "meaning": "시작하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "commence",
+          "meaning": "시작하다"
+        }
+      ]
+    },
+    {
+      "id": "constrain",
+      "word": "constrain",
+      "meaning": "제한하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "constrain",
+          "meaning": "제한하다"
+        }
+      ]
+    },
+    {
+      "id": "demonstrate",
+      "word": "demonstrate",
+      "meaning": "보여주다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "demonstrate",
+          "meaning": "보여주다"
+        }
+      ]
+    },
+    {
+      "id": "eliminate",
+      "word": "eliminate",
+      "meaning": "제거하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "eliminate",
+          "meaning": "제거하다"
+        }
+      ]
+    },
+    {
+      "id": "incur",
+      "word": "incur",
+      "meaning": "비용 발생시키다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "incur",
+          "meaning": "비용 발생시키다"
+        }
+      ]
+    },
+    {
+      "id": "streamline",
+      "word": "streamline",
+      "meaning": "간소화하다",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "streamline",
+          "meaning": "간소화하다"
+        }
+      ]
+    },
+    {
+      "id": "outage",
+      "word": "outage",
+      "meaning": "정전",
+      "days": [
+        "DAY1"
+      ],
+      "originals": [
+        {
+          "day": "DAY1",
+          "word": "outage",
+          "meaning": "정전"
+        }
+      ]
+    },
+    {
+      "id": "circumstance",
+      "word": "circumstance",
+      "meaning": "상황",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "circumstance",
+          "meaning": "상황"
+        }
+      ]
+    },
+    {
+      "id": "estimate",
+      "word": "estimate",
+      "meaning": "견적",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "estimate",
+          "meaning": "견적"
+        }
+      ]
+    },
+    {
+      "id": "accomplish",
+      "word": "accomplish",
+      "meaning": "달성하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "accomplish",
+          "meaning": "달성하다"
+        }
+      ]
+    },
+    {
+      "id": "handle",
+      "word": "handle",
+      "meaning": "처리하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "handle",
+          "meaning": "처리하다"
+        }
+      ]
+    },
+    {
+      "id": "obtain",
+      "word": "obtain",
+      "meaning": "얻다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "obtain",
+          "meaning": "얻다"
+        }
+      ]
+    },
+    {
+      "id": "favorable",
+      "word": "favorable",
+      "meaning": "호의적인",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "favorable",
+          "meaning": "호의적인"
+        }
+      ]
+    },
+    {
+      "id": "optional",
+      "word": "optional",
+      "meaning": "선택적인",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "optional",
+          "meaning": "선택적인"
+        }
+      ]
+    },
+    {
+      "id": "suitable",
+      "word": "suitable",
+      "meaning": "적합한",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "suitable",
+          "meaning": "적합한"
+        }
+      ]
+    },
+    {
+      "id": "closely",
+      "word": "closely",
+      "meaning": "면밀히/긴밀하게",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "closely",
+          "meaning": "면밀히/긴밀하게"
+        }
+      ]
+    },
+    {
+      "id": "gradually",
+      "word": "gradually",
+      "meaning": "점차",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "gradually",
+          "meaning": "점차"
+        }
+      ]
+    },
+    {
+      "id": "alternative",
+      "word": "alternative",
+      "meaning": "대안",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "alternative",
+          "meaning": "대안"
+        }
+      ]
+    },
+    {
+      "id": "criterion",
+      "word": "criterion",
+      "meaning": "기준",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "criterion",
+          "meaning": "기준"
+        }
+      ]
+    },
+    {
+      "id": "conserve",
+      "word": "conserve",
+      "meaning": "보존하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "conserve",
+          "meaning": "보존하다"
+        }
+      ]
+    },
+    {
+      "id": "coordinate",
+      "word": "coordinate",
+      "meaning": "조정하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "coordinate",
+          "meaning": "조정하다"
+        }
+      ]
+    },
+    {
+      "id": "encounter",
+      "word": "encounter",
+      "meaning": "직면하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "encounter",
+          "meaning": "직면하다"
+        }
+      ]
+    },
+    {
+      "id": "retain",
+      "word": "retain",
+      "meaning": "유지하다",
+      "days": [
+        "DAY2",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "retain",
+          "meaning": "유지하다"
+        },
+        {
+          "day": "DAY4",
+          "word": "retain",
+          "meaning": "유지하다"
+        }
+      ]
+    },
+    {
+      "id": "undertake",
+      "word": "undertake",
+      "meaning": "착수하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "undertake",
+          "meaning": "착수하다"
+        }
+      ]
+    },
+    {
+      "id": "adequate",
+      "word": "adequate",
+      "meaning": "충분한/적절한",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "adequate",
+          "meaning": "충분한/적절한"
+        }
+      ]
+    },
+    {
+      "id": "crucial",
+      "word": "crucial",
+      "meaning": "매우 중요한",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "crucial",
+          "meaning": "매우 중요한"
+        }
+      ]
+    },
+    {
+      "id": "economical",
+      "word": "economical",
+      "meaning": "경제적인",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "economical",
+          "meaning": "경제적인"
+        }
+      ]
+    },
+    {
+      "id": "practical",
+      "word": "practical",
+      "meaning": "실용적인",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "practical",
+          "meaning": "실용적인"
+        }
+      ]
+    },
+    {
+      "id": "ongoing",
+      "word": "ongoing",
+      "meaning": "진행 중인",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "ongoing",
+          "meaning": "진행 중인"
+        }
+      ]
+    },
+    {
+      "id": "agenda",
+      "word": "agenda",
+      "meaning": "안건",
+      "days": [
+        "DAY2",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "agenda",
+          "meaning": "안건"
+        },
+        {
+          "day": "DAY4",
+          "word": "agenda",
+          "meaning": "안건"
+        }
+      ]
+    },
+    {
+      "id": "defect",
+      "word": "defect",
+      "meaning": "결함",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "defect",
+          "meaning": "결함"
+        }
+      ]
+    },
+    {
+      "id": "initiative",
+      "word": "initiative",
+      "meaning": "계획",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "initiative",
+          "meaning": "계획"
+        }
+      ]
+    },
+    {
+      "id": "objective",
+      "word": "objective",
+      "meaning": "목표",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "objective",
+          "meaning": "목표"
+        }
+      ]
+    },
+    {
+      "id": "vacancy",
+      "word": "vacancy",
+      "meaning": "공석",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "vacancy",
+          "meaning": "공석"
+        }
+      ]
+    },
+    {
+      "id": "clarify",
+      "word": "clarify",
+      "meaning": "명확히 하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "clarify",
+          "meaning": "명확히 하다"
+        }
+      ]
+    },
+    {
+      "id": "issue",
+      "word": "issue",
+      "meaning": "발급하다 / (간행물의) 호 / 문제",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "issue",
+          "meaning": "발급하다/호/문"
+        }
+      ]
+    },
+    {
+      "id": "restore",
+      "word": "restore",
+      "meaning": "복구하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "restore",
+          "meaning": "복구하다"
+        }
+      ]
+    },
+    {
+      "id": "accomplished",
+      "word": "accomplished",
+      "meaning": "숙련된, 뛰어난",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "accomplished",
+          "meaning": "숙련된, 뛰어난"
+        }
+      ]
+    },
+    {
+      "id": "complimentary",
+      "word": "complimentary",
+      "meaning": "무료의",
+      "days": [
+        "DAY2",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "complimentary",
+          "meaning": "무료의"
+        },
+        {
+          "day": "DAY4",
+          "word": "complimentary",
+          "meaning": "무료의"
+        }
+      ]
+    },
+    {
+      "id": "enclose",
+      "word": "enclose",
+      "meaning": "동봉하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "enclose",
+          "meaning": "동봉하다"
+        }
+      ]
+    },
+    {
+      "id": "attach",
+      "word": "attach",
+      "meaning": "첨부하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "attach",
+          "meaning": "첨부하다"
+        }
+      ]
+    },
+    {
+      "id": "be reluctant to",
+      "word": "be reluctant to",
+      "meaning": "~하기를 꺼리다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "be reluctant to",
+          "meaning": "~하기를 꺼리"
+        }
+      ]
+    },
+    {
+      "id": "spacious",
+      "word": "spacious",
+      "meaning": "넓은",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "spacious",
+          "meaning": "넓은"
+        }
+      ]
+    },
+    {
+      "id": "outstanding",
+      "word": "outstanding",
+      "meaning": "뛰어난",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "outstanding",
+          "meaning": "뛰어난"
+        }
+      ]
+    },
+    {
+      "id": "abruptly",
+      "word": "abruptly",
+      "meaning": "갑자기",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "abruptly",
+          "meaning": "갑자기"
+        }
+      ]
+    },
+    {
+      "id": "accommodation",
+      "word": "accommodation",
+      "meaning": "숙소",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "accommodation",
+          "meaning": "숙소"
+        }
+      ]
+    },
+    {
+      "id": "earnings",
+      "word": "earnings",
+      "meaning": "수익, 소득",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "earnings",
+          "meaning": "수익, 소득"
+        }
+      ]
+    },
+    {
+      "id": "premises",
+      "word": "premises",
+      "meaning": "구내, 부지",
+      "days": [
+        "DAY2",
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "premises",
+          "meaning": "구내, 부지"
+        },
+        {
+          "day": "DAY4",
+          "word": "premises",
+          "meaning": "구내, 건물"
+        }
+      ]
+    },
+    {
+      "id": "compile",
+      "word": "compile",
+      "meaning": "자료를 모으다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "compile",
+          "meaning": "자료를 모으다"
+        }
+      ]
+    },
+    {
+      "id": "dispatch",
+      "word": "dispatch",
+      "meaning": "발송하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "dispatch",
+          "meaning": "발송하다"
+        }
+      ]
+    },
+    {
+      "id": "incorporate",
+      "word": "incorporate",
+      "meaning": "포함하다, 통합하다",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "incorporate",
+          "meaning": "포함하다, 통합하다"
+        }
+      ]
+    },
+    {
+      "id": "lucrative",
+      "word": "lucrative",
+      "meaning": "수익성이 좋은",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "lucrative",
+          "meaning": "수익성이 좋은"
+        }
+      ]
+    },
+    {
+      "id": "provisional",
+      "word": "provisional",
+      "meaning": "임시의, 잠정적인",
+      "days": [
+        "DAY2"
+      ],
+      "originals": [
+        {
+          "day": "DAY2",
+          "word": "provisional",
+          "meaning": "임시의, 잠정적인"
+        }
+      ]
+    },
+    {
+      "id": "nevertheless",
+      "word": "Nevertheless",
+      "meaning": "그럼에도 불구하고",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Neverthelss",
+          "meaning": "그럼에도 불구하고"
+        }
+      ]
+    },
+    {
+      "id": "nonetheless",
+      "word": "Nonetheless",
+      "meaning": "그럼에도 불구하고",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Nonetheless",
+          "meaning": "그럼에도 불구하고"
+        }
+      ]
+    },
+    {
+      "id": "even so",
+      "word": "even so",
+      "meaning": "그럼에도 불구하고",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "even so",
+          "meaning": "그럼에도 불구하고"
+        }
+      ]
+    },
+    {
+      "id": "on the other hand",
+      "word": "on the other hand",
+      "meaning": "반면에",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "on the other hand",
+          "meaning": "반면에"
+        }
+      ]
+    },
+    {
+      "id": "in contrast",
+      "word": "in contrast",
+      "meaning": "대조적으로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "in contrast",
+          "meaning": "대조적으로"
+        }
+      ]
+    },
+    {
+      "id": "conversely",
+      "word": "conversely",
+      "meaning": "반대로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "conversely",
+          "meaning": "반대로"
+        }
+      ]
+    },
+    {
+      "id": "instead",
+      "word": "instead",
+      "meaning": "대신에",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "instead",
+          "meaning": "대신에"
+        }
+      ]
+    },
+    {
+      "id": "alternatively",
+      "word": "alternatively",
+      "meaning": "다른 방법으로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "alternatively",
+          "meaning": "다른 방법으로"
+        }
+      ]
+    },
+    {
+      "id": "otherwise",
+      "word": "otherwise",
+      "meaning": "그렇지 않으면",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "otherwise",
+          "meaning": "그렇지 않으면"
+        }
+      ]
+    },
+    {
+      "id": "therefore",
+      "word": "therefore",
+      "meaning": "그러므로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "therefore",
+          "meaning": "그러므로"
+        }
+      ]
+    },
+    {
+      "id": "thus",
+      "word": "Thus",
+      "meaning": "그러므로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Thus",
+          "meaning": "그러므로"
+        }
+      ]
+    },
+    {
+      "id": "consequently",
+      "word": "Consequently",
+      "meaning": "그 결과",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Consequently",
+          "meaning": "그 결과"
+        }
+      ]
+    },
+    {
+      "id": "accordingly",
+      "word": "Accordingly",
+      "meaning": "그에 따라서",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Accordingly",
+          "meaning": "그에 따라서"
+        }
+      ]
+    },
+    {
+      "id": "hence",
+      "word": "Hence",
+      "meaning": "그러므로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Hence",
+          "meaning": "그러므로"
+        }
+      ]
+    },
+    {
+      "id": "as a result",
+      "word": "As a result",
+      "meaning": "그 결과",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "As a result",
+          "meaning": "그 결과"
+        }
+      ]
+    },
+    {
+      "id": "as a consequence",
+      "word": "As a consequence",
+      "meaning": "그 결과",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "As s consequence",
+          "meaning": "그 결과"
+        }
+      ]
+    },
+    {
+      "id": "thereby",
+      "word": "Thereby",
+      "meaning": "그러므로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Thereby",
+          "meaning": "그러므로"
+        }
+      ]
+    },
+    {
+      "id": "moreover",
+      "word": "Moreover",
+      "meaning": "게다가",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Moreover",
+          "meaning": "게다가"
+        }
+      ]
+    },
+    {
+      "id": "furthermore",
+      "word": "Furthermore",
+      "meaning": "게다가",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Furthermore",
+          "meaning": "게다가"
+        }
+      ]
+    },
+    {
+      "id": "additionally",
+      "word": "Additionally",
+      "meaning": "추가적으로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Additionally",
+          "meaning": "추가적으로"
+        }
+      ]
+    },
+    {
+      "id": "in addition",
+      "word": "In addition",
+      "meaning": "추가적으로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "In addition",
+          "meaning": "추가적으로"
+        }
+      ]
+    },
+    {
+      "id": "besides",
+      "word": "Besides",
+      "meaning": "게다가",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Besides",
+          "meaning": "게다가"
+        }
+      ]
+    },
+    {
+      "id": "also",
+      "word": "Also",
+      "meaning": "또한",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Also",
+          "meaning": "또한"
+        }
+      ]
+    },
+    {
+      "id": "likewise",
+      "word": "Likewise",
+      "meaning": "이와 비슷하게",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Likewise",
+          "meaning": "이와 비슷하게"
+        }
+      ]
+    },
+    {
+      "id": "similarly",
+      "word": "Similarly",
+      "meaning": "이와 비슷하게",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Similarly",
+          "meaning": "이와 비슷하게"
+        }
+      ]
+    },
+    {
+      "id": "on top of that",
+      "word": "On top of that",
+      "meaning": "게다가",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "On top of that",
+          "meaning": "게다가"
+        }
+      ]
+    },
+    {
+      "id": "for instance",
+      "word": "For instance",
+      "meaning": "예를 들어",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Forf instance",
+          "meaning": "예를 들어"
+        }
+      ]
+    },
+    {
+      "id": "in particular",
+      "word": "In particular",
+      "meaning": "특히",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "In particular",
+          "meaning": "특히"
+        }
+      ]
+    },
+    {
+      "id": "namely",
+      "word": "Namely",
+      "meaning": "즉",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Namely",
+          "meaning": "즉"
+        }
+      ]
+    },
+    {
+      "id": "that is",
+      "word": "that is",
+      "meaning": "즉",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "that is",
+          "meaning": "즉"
+        }
+      ]
+    },
+    {
+      "id": "in other words",
+      "word": "in other words",
+      "meaning": "다시 말해서",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "in other words",
+          "meaning": "다시 말해서"
+        }
+      ]
+    },
+    {
+      "id": "meanwhile",
+      "word": "Meanwhile",
+      "meaning": "한편",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Meanwhile",
+          "meaning": "한편"
+        }
+      ]
+    },
+    {
+      "id": "in the meantime",
+      "word": "In the meantime",
+      "meaning": "한편",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "In the meantime",
+          "meaning": "한편"
+        }
+      ]
+    },
+    {
+      "id": "subsequently",
+      "word": "Subsequently",
+      "meaning": "그 후에",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Subsequently",
+          "meaning": "그 후에"
+        }
+      ]
+    },
+    {
+      "id": "afterwards",
+      "word": "Afterwards",
+      "meaning": "그 후에",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Afterwards",
+          "meaning": "그 후에"
+        }
+      ]
+    },
+    {
+      "id": "thereafter",
+      "word": "Thereafter",
+      "meaning": "그 후에",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Thereafter",
+          "meaning": "그 후에"
+        }
+      ]
+    },
+    {
+      "id": "then",
+      "word": "Then",
+      "meaning": "그러고나서",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Then",
+          "meaning": "그러고나서"
+        }
+      ]
+    },
+    {
+      "id": "eventually",
+      "word": "eventually",
+      "meaning": "결국",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "eventually",
+          "meaning": "결국"
+        }
+      ]
+    },
+    {
+      "id": "at the same time",
+      "word": "At the same time",
+      "meaning": "동시에, 한편으로는",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "At the same time",
+          "meaning": "동시에, 한편으로는"
+        }
+      ]
+    },
+    {
+      "id": "indeed",
+      "word": "Indeed",
+      "meaning": "사실",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Indeed",
+          "meaning": "사실"
+        }
+      ]
+    },
+    {
+      "id": "in fact",
+      "word": "In fact",
+      "meaning": "사실은",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "In fact",
+          "meaning": "사실은"
+        }
+      ]
+    },
+    {
+      "id": "above all",
+      "word": "Above all",
+      "meaning": "무엇보다도",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Above all",
+          "meaning": "무엇보다도"
+        }
+      ]
+    },
+    {
+      "id": "overall",
+      "word": "Overall",
+      "meaning": "전반적으로",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Overall",
+          "meaning": "전반적으로"
+        }
+      ]
+    },
+    {
+      "id": "regardless",
+      "word": "Regardless",
+      "meaning": "그럼에도 불구하고",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Regardless",
+          "meaning": "그럼에도 불구하고"
+        }
+      ]
+    },
+    {
+      "id": "in comparison",
+      "word": "In comparison",
+      "meaning": "비교해 보면",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "In comparison",
+          "meaning": "비교해 보면"
+        }
+      ]
+    },
+    {
+      "id": "if so",
+      "word": "If so",
+      "meaning": "만약 그렇다면",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "If so",
+          "meaning": "만약 그렇다면"
+        }
+      ]
+    },
+    {
+      "id": "if not",
+      "word": "If not",
+      "meaning": "만약 그렇지 않다면",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "If not",
+          "meaning": "만약 그렇지 않다면"
+        }
+      ]
+    },
+    {
+      "id": "to that end",
+      "word": "To that end",
+      "meaning": "그렇게 하기 위해서",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "To that end",
+          "meaning": "그렇게 하기 위해서"
+        }
+      ]
+    },
+    {
+      "id": "beforehand",
+      "word": "Beforehand",
+      "meaning": "미리, 사전에",
+      "days": [
+        "DAY3"
+      ],
+      "originals": [
+        {
+          "day": "DAY3",
+          "word": "Beforehand",
+          "meaning": "미리, 사전에"
+        }
+      ]
+    },
+    {
+      "id": "recipient",
+      "word": "recipient",
+      "meaning": "수신자",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "recipient",
+          "meaning": "수신자"
+        }
+      ]
+    },
+    {
+      "id": "minutes",
+      "word": "minutes",
+      "meaning": "회의록",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "minutes",
+          "meaning": "회의록"
+        }
+      ]
+    },
+    {
+      "id": "personnel",
+      "word": "personnel",
+      "meaning": "직원, 인사",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "personnel",
+          "meaning": "직원, 인사"
+        }
+      ]
+    },
+    {
+      "id": "exclusive",
+      "word": "exclusive",
+      "meaning": "독점적인, 전용의",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "exclusive",
+          "meaning": "독점적인, 전용의"
+        }
+      ]
+    },
+    {
+      "id": "rebate",
+      "word": "rebate",
+      "meaning": "환불",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "rebate",
+          "meaning": "환불"
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "word": "quote",
+      "meaning": "견적",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "quote",
+          "meaning": "견적"
+        }
+      ]
+    },
+    {
+      "id": "revenue",
+      "word": "revenue",
+      "meaning": "수익",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "revenue",
+          "meaning": "수익"
+        }
+      ]
+    },
+    {
+      "id": "credential",
+      "word": "credential",
+      "meaning": "자격",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "credential",
+          "meaning": "자격"
+        }
+      ]
+    },
+    {
+      "id": "appraise",
+      "word": "Appraise",
+      "meaning": "평가하다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "Appraise",
+          "meaning": "평가하"
+        }
+      ]
+    },
+    {
+      "id": "compensation",
+      "word": "compensation",
+      "meaning": "보상, 급여",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "compensation",
+          "meaning": "보상, 급여"
+        }
+      ]
+    },
+    {
+      "id": "prerequisite",
+      "word": "prerequisite",
+      "meaning": "필수 조건",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "prerequisite",
+          "meaning": "필수 조건"
+        }
+      ]
+    },
+    {
+      "id": "refurbishment",
+      "word": "refurbishment",
+      "meaning": "재단장, 보수",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "refurbishment",
+          "meaning": "재단장, 보수"
+        }
+      ]
+    },
+    {
+      "id": "renovation",
+      "word": "renovation",
+      "meaning": "개조, 보수",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "renovation",
+          "meaning": "개조, 보수"
+        }
+      ]
+    },
+    {
+      "id": "supplier",
+      "word": "supplier",
+      "meaning": "공급업자",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "supplier",
+          "meaning": "공급업자"
+        }
+      ]
+    },
+    {
+      "id": "contractor",
+      "word": "contractor",
+      "meaning": "시공업자",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "contractor",
+          "meaning": "시공업자"
+        }
+      ]
+    },
+    {
+      "id": "tenant",
+      "word": "tenant",
+      "meaning": "세입자",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "tenant",
+          "meaning": "세입자"
+        }
+      ]
+    },
+    {
+      "id": "landlord",
+      "word": "landlord",
+      "meaning": "집주인",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "landlord",
+          "meaning": "집주인"
+        }
+      ]
+    },
+    {
+      "id": "provision",
+      "word": "provision",
+      "meaning": "조건",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "provision",
+          "meaning": "조건"
+        }
+      ]
+    },
+    {
+      "id": "fluctuation",
+      "word": "fluctuation",
+      "meaning": "변동",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "fluctuation",
+          "meaning": "변동"
+        }
+      ]
+    },
+    {
+      "id": "procurement",
+      "word": "procurement",
+      "meaning": "조달, 구매",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "procurement",
+          "meaning": "조달, 구매"
+        }
+      ]
+    },
+    {
+      "id": "subsidiary",
+      "word": "subsidiary",
+      "meaning": "자회사",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "subsidiary",
+          "meaning": "자회사"
+        }
+      ]
+    },
+    {
+      "id": "stakeholder",
+      "word": "stakeholder",
+      "meaning": "이해관계자",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "stakeholder",
+          "meaning": "주주"
+        }
+      ]
+    },
+    {
+      "id": "patronage",
+      "word": "patronage",
+      "meaning": "애용",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "patronage",
+          "meaning": "애용"
+        }
+      ]
+    },
+    {
+      "id": "stipulation",
+      "word": "stipulation",
+      "meaning": "계약 조항",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "stipulation",
+          "meaning": "계약 조"
+        }
+      ]
+    },
+    {
+      "id": "alleviate",
+      "word": "alleviate",
+      "meaning": "완화하다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "alleviate",
+          "meaning": "완화하"
+        }
+      ]
+    },
+    {
+      "id": "relinquish",
+      "word": "relinquish",
+      "meaning": "포기하다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "relinquish",
+          "meaning": "포기하다"
+        }
+      ]
+    },
+    {
+      "id": "revoke",
+      "word": "revoke",
+      "meaning": "취소하다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "revoke",
+          "meaning": "취소하다"
+        }
+      ]
+    },
+    {
+      "id": "attribute a to b",
+      "word": "attribute A to B",
+      "meaning": "~를 ~탓으로 돌리다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "attribute A to B",
+          "meaning": "~를 ~탓으로 돌리다"
+        }
+      ]
+    },
+    {
+      "id": "credit a to b",
+      "word": "Credit A to B",
+      "meaning": "~를 ~탓으로 돌리다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "Credit A to B",
+          "meaning": "~를 ~탓으로 돌리다"
+        }
+      ]
+    },
+    {
+      "id": "offset",
+      "word": "offset",
+      "meaning": "상쇄하다",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "offset",
+          "meaning": "상쇄하다"
+        }
+      ]
+    },
+    {
+      "id": "unprecedented",
+      "word": "unprecedented",
+      "meaning": "전례 없는",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "unprecedented",
+          "meaning": "전례 없는"
+        }
+      ]
+    },
+    {
+      "id": "adversity",
+      "word": "adversity",
+      "meaning": "역경, 어려움",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "adversity",
+          "meaning": "역경, 어려움"
+        }
+      ]
+    },
+    {
+      "id": "consensus",
+      "word": "consensus",
+      "meaning": "합의",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "consensus",
+          "meaning": "합의"
+        }
+      ]
+    },
+    {
+      "id": "disruption",
+      "word": "disruption",
+      "meaning": "중단",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "disruption",
+          "meaning": "중단"
+        }
+      ]
+    },
+    {
+      "id": "insight",
+      "word": "Insight",
+      "meaning": "식견",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "Insight",
+          "meaning": "식견"
+        }
+      ]
+    },
+    {
+      "id": "itinerary",
+      "word": "itinerary",
+      "meaning": "여행 일정표",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "itinerary",
+          "meaning": "여행 일정표"
+        }
+      ]
+    },
+    {
+      "id": "logistics",
+      "word": "logistics",
+      "meaning": "물류",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "logistics",
+          "meaning": "물류"
+        }
+      ]
+    },
+    {
+      "id": "milestone",
+      "word": "milestone",
+      "meaning": "중요한 사건",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "milestone",
+          "meaning": "중요한 사건"
+        }
+      ]
+    },
+    {
+      "id": "perspective",
+      "word": "Perspective",
+      "meaning": "관점",
+      "days": [
+        "DAY4"
+      ],
+      "originals": [
+        {
+          "day": "DAY4",
+          "word": "Perspective",
+          "meaning": "관점"
+        }
+      ]
+    }
+  ]
+}

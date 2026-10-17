@@ -18,3 +18,9 @@
 .status-pill{background:#383021}
 .search-box:focus-within{outline:2px solid #cfba8b;outline-offset:2px}
 .switch{box-shadow:inset 0 0 0 1px #79866d}
+
+.choice.selected{background:#303124;border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold);color:var(--text)}
+.choice.selected .choice-key{background:var(--gold);border-color:var(--gold);color:#24271c}
+.choice-selection{margin-left:auto;font-size:10px;color:var(--gold);white-space:nowrap}
+.answer-saved{color:var(--muted)}
+.review-answer{display:block;margin-top:6px;font-size:11px;line-height:1.8;color:var(--muted)}

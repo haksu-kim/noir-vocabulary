@@ -4,7 +4,7 @@ A responsive TOEIC vocabulary practice app. Buildless HTML/CSS/JavaScript; all l
 
 ## Use
 
-Choose one or more DAYs, a question count, and English-to-Korean or Korean-to-English mode. Questions are sampled without replacement. The app provides immediate feedback, a result summary, wrong-answer review, searchable vocabulary, the latest 50 completed sessions, and resumable progress. Keyboard shortcuts: 1–4 to answer, Enter to continue.
+Choose one or more DAYs, a question count, and English-to-Korean or Korean-to-English mode. Questions are sampled without replacement. Answer selections stay neutral; scores and correct answers appear only after the quiz ends. The app provides a result summary, wrong-answer review, searchable vocabulary, the latest 50 completed sessions, and resumable progress. Keyboard shortcuts: 1–4 to answer, Enter to continue.
 
 ## Data
 

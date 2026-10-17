@@ -24,9 +24,9 @@ export function quizSummary(questions) {
   return {total: questions.length, correct, wrong: questions.filter(q => q.answer !== q.correct), score: questions.length ? Math.round(correct / questions.length * 100) : 0};
 }
 export function answerQuestion(question, answer) {
-  if (question.answered) return false;
   if (answer !== null && !question.choices.includes(answer)) return false;
-  question.answer = answer;
-  question.answered = true;
+  const cancel = answer !== null && question.answered && question.answer === answer;
+  question.answer = cancel ? null : answer;
+  question.answered = !cancel;
   return true;
 }

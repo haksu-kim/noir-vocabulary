@@ -28,10 +28,16 @@ test('questions sample without repeats and cap to available pool',()=>{
  const before=JSON.stringify(words);shuffle(words);assert.equal(JSON.stringify(words),before);
  const orders=new Set(Array.from({length:10},()=>createQuiz(words,words,20).map(q=>q.id).join('|')));assert.ok(orders.size>1);
 });
-test('correct answers, wrong answers, skips and duplicate answers score correctly',()=>{
+test('changed answers, cancellations and skips produce the final score',()=>{
  const quiz=createQuiz(words,words,4);
  assert.equal(answerQuestion(quiz[0],quiz[0].correct),true);
- assert.equal(answerQuestion(quiz[0],null),false);
+ assert.equal(answerQuestion(quiz[0],quiz[0].correct),true);
+ assert.equal(quiz[0].answered,false);assert.equal(quiz[0].answer,null);
+ const wrong=quiz[0].choices.find(c=>c!==quiz[0].correct);
+ answerQuestion(quiz[0],wrong);answerQuestion(quiz[0],quiz[0].correct);
+ assert.equal(quiz[0].answer,quiz[0].correct);
+ answerQuestion(quiz[0],null);assert.equal(quiz[0].answered,true);assert.equal(quiz[0].answer,null);
+ answerQuestion(quiz[0],quiz[0].correct);
  assert.equal(answerQuestion(quiz[1],'invalid-answer'),false);
  answerQuestion(quiz[1],quiz[1].choices.find(c=>c!==quiz[1].correct));
  answerQuestion(quiz[2],null);answerQuestion(quiz[3],quiz[3].correct);

@@ -16,7 +16,9 @@ test('answer display cannot reveal whether the selected answer is correct', () =
   const right = render({correct: 'A'}), wrong = render({correct: 'B'});
   assert.equal(right, wrong);
   assert.equal((right.match(/aria-pressed="true"/g) || []).length, 1);
-  assert.ok(right.includes('답변을 저장했어요.'));
+  assert.ok(right.includes('선택한 답을 다시 누르면 취소돼요.'));
+  assert.ok(!right.includes('disabled'));
+  assert.ok(!right.includes('data-action="cancel"'));
   assert.ok(!/class="choice [^"]*(?:correct|incorrect|dimmed)/.test(right));
   assert.ok(!right.includes('개 정답'));
   assert.ok(!right.includes('정답은'));

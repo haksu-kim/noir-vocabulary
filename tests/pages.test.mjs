@@ -1,0 +1,48 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp, cp, readFile, writeFile, rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {preparePages} from '../scripts/prepare-pages.mjs';
+
+test('published assets work together and source files stay untouched', async t => {
+  const temp = await mkdtemp(join(tmpdir(), 'noir-pages-'));
+  t.after(() => rm(temp, {recursive: true, force: true}));
+  const source = join(temp, 'source'), output = join(temp, 'output');
+  await cp(new URL('../dist/', import.meta.url), source, {recursive: true});
+  const before = await readFile(join(source, 'app.js'), 'utf8');
+  const release = await preparePages({source, output});
+  const app = await readFile(join(output, release.app), 'utf8');
+  const engine = app.match(/from '\.\/(engine-[a-f0-9]+\.js)'/)[1];
+  const words = app.match(/new URL\('\.\/(words-[a-f0-9]+\.json)'/)[1];
+  assert.ok((await readFile(join(output, 'assets', engine), 'utf8')).includes('export function createQuiz'));
+  assert.equal(JSON.parse(await readFile(join(output, 'assets', words), 'utf8')).words.length, 183);
+  assert.equal(await readFile(join(source, 'app.js'), 'utf8'), before);
+  const html = await readFile(join(output, 'index.html'), 'utf8');
+  assert.ok(html.includes("cache: 'no-store'"));
+  assert.ok(html.includes("url.searchParams.set('check', Date.now().toString())"));
+  assert.ok(html.includes(JSON.stringify(release)));
+  assert.ok(!html.includes('src="./app.js'));
+  assert.deepEqual(await preparePages({source, output}), release);
+});
+
+test('CSS, engine, and vocabulary changes invalidate their dependent assets', async t => {
+  const temp = await mkdtemp(join(tmpdir(), 'noir-pages-'));
+  t.after(() => rm(temp, {recursive: true, force: true}));
+  const source = join(temp, 'source'), output = join(temp, 'output');
+  await cp(new URL('../dist/', import.meta.url), source, {recursive: true});
+  const first = await preparePages({source, output});
+  await writeFile(join(source, 'style.css'), 'body{color:white;background:black}');
+  const css = await preparePages({source, output});
+  assert.notEqual(css.style, first.style);
+  assert.notEqual(css.version, first.version);
+  assert.equal(css.app, first.app);
+  await writeFile(join(source, 'engine.js'), (await readFile(join(source, 'engine.js'), 'utf8')) + '\n// updated engine\n');
+  const engine = await preparePages({source, output});
+  assert.notEqual(engine.app, css.app);
+  const words = JSON.parse(await readFile(join(source, 'words.json'), 'utf8'));
+  words.words[0].meaning = 'updated meaning';
+  await writeFile(join(source, 'words.json'), JSON.stringify(words));
+  const data = await preparePages({source, output});
+  assert.notEqual(data.app, engine.app);
+});

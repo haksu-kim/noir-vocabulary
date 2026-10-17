@@ -29,14 +29,16 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-      - name: Test quiz engine
+      - name: Run tests
         run: node --test tests/*.test.mjs
+      - name: Prepare versioned static assets
+        run: node scripts/prepare-pages.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload static app
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: _site
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

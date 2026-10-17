@@ -27,7 +27,11 @@ History and mistakes are browser-local and do not synchronize between devices or
 
 ## GitHub Pages
 
-The `.github/workflows/pages.yml` workflow tests the quiz engine and publishes only `dist/` when `main` changes. There is no build step or dependency installation. In repository Settings → Pages, choose **GitHub Actions** as the source.
+The `.github/workflows/pages.yml` workflow runs tests, prepares versioned assets with `node scripts/prepare-pages.mjs`, and publishes `_site/` when `main` changes. No dependency installation is needed. In repository Settings → Pages, choose **GitHub Actions** as the source. For a deployment preview, run the preparation command and serve `_site/`.
+
+Published HTML checks `release.json` with a unique query and `cache: 'no-store'` on each page load. Even cached HTML from this loader can discover the latest CSS and app module. Content hashes version the CSS, JavaScript, quiz engine, and word data automatically, including their dependency links. The existing `dist/` files remain the editable source. A failed release check falls back to that HTML's bundled release; this is best-effort recovery, not offline support. Returning through browser back/forward cache also checks the release, except during an active quiz. Already-open pages are not interrupted by background polling.
+
+The first deployment of this loader still needs one ordinary refresh for visitors who already have pre-loader HTML open. After that, reopening or refreshing the page uses the release check. Browser-local learning history is not cleared.
 
 All assets, JavaScript imports, and vocabulary requests use relative URLs, so the app works under `/<repository>/` without a base-path override. Navigation changes the displayed content without introducing nested URL routes; refreshes need no rewrite or `404.html` fallback.
 

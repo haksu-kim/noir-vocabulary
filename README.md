@@ -10,6 +10,10 @@ Choose one or more DAYs, a question count, and English-to-Korean or Korean-to-En
 
 `dist/words.json` contains 183 unique expressions from the 204 source records across DAY1–DAY6. Each entry retains its original values and DAY membership. DAY5 and DAY6 contain the same four words. Clear spelling and truncated-meaning errors are corrected for study; original extract files remain separate and unchanged.
 
+## Pronunciation
+
+Each vocabulary entry points to a bundled, content-hashed English MP3 in `dist/audio/`. A click calls the native audio player's `play()` immediately, without waiting for a fetch or browser speech voices. The player remains visible for replay or manual playback if an in-app browser blocks the request. Buttons indicate playback only after the audio `playing` event. Clips were generated with the installed macOS Samantha voice for personal study; `scripts/generate-pronunciation.py` documents regeneration using `say` and `ffmpeg`. CI and GitHub Pages use the committed clips and need no audio tools. iPhone hardware playback still requires verification on the visitor's device.
+
 ## Development
 
 Serve `dist/` with any static HTTP server. Run `node --test tests/*.test.mjs` from this directory for engine tests. No dependency install or build is needed. The font stylesheet uses Google Fonts with local sans-serif and serif fallbacks.

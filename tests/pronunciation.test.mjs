@@ -1,36 +1,46 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 const app=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
-const source=app.slice(app.indexOf('const speechSupported ='),app.indexOf('function libraryRows()'));
-const button=()=>({classList:{add(){},remove(){}},setAttribute(){}});
-function setup(voices=[]) {
- const status={textContent:''},spoken=[];
- let cancels=0;
- const window={SpeechSynthesisUtterance:class {constructor(text){this.text=text;}},speechSynthesis:{getVoices:()=>voices,speak:u=>spoken.push(u),cancel:()=>cancels++}};
- const api=runInNewContext(source+'\n({pronounce,stopPronunciation})',{window,$:()=>status});
- return {...api,status,spoken,cancels:()=>cancels};
+const source=app.slice(app.indexOf('let pronunciation ='),app.indexOf('function libraryRows()'));
+function setup({reject=false}={}) {
+ const status={textContent:''},panel={hidden:true},label={textContent:''};
+ let plays=0,pauses=0;
+ const audio={pause(){pauses++;},play(){plays++;return reject?Promise.reject(Error('NotAllowedError')):Promise.resolve();}};
+ const button=()=>({classList:{add(){},remove(){}},setAttribute(){}});
+ const elements={'#pronunciation-player':audio,'#speech-status':status,'#pronunciation-controls':panel,'#pronunciation-label':label};
+ const words=[{word:'efficient',audio:'audio/efficient-123.mp3'},{word:'additional',audio:'audio/additional-456.mp3'}];
+ const api=runInNewContext(source+'\n({pronounce,stopPronunciation})',{words,document:{baseURI:'https://example.com/noir-vocabulary/?v=test'},URL,$:s=>elements[s]});
+ return {...api,audio,status,panel,label,button,plays:()=>plays,pauses:()=>pauses};
 }
-test('pronunciation reads only the English word and prefers an English voice',()=>{
- const voice={lang:'en-US',localService:true};
- const p=setup([{lang:'ko-KR'},voice]);
- p.pronounce('For instance',button());
- assert.equal(p.spoken[0].text,'For instance');assert.equal(p.spoken[0].voice,voice);
- assert.equal(p.spoken[0].lang,'en-US');assert.equal(p.spoken[0].rate,.85);
+test('play starts synchronously from the click using the same-site MP3 and exposes native controls',()=>{
+ const p=setup();p.pronounce('efficient',p.button());
+ assert.equal(p.plays(),1);assert.equal(p.audio.src,'https://example.com/noir-vocabulary/audio/efficient-123.mp3');
+ assert.equal(p.panel.hidden,false);assert.equal(p.audio.muted,false);assert.equal(p.audio.volume,1);
+ assert.match(p.status.textContent,/불러오는/);
+ p.audio.onplaying();assert.match(p.status.textContent,/재생 중/);
+ p.audio.onended();assert.equal(p.status.textContent,'');
 });
-test('same button stops speech and another word replaces it without stale errors',()=>{
- const p=setup(),a=button(),b=button();
- p.pronounce('efficient',a);p.pronounce('efficient',a);
- assert.equal(p.spoken.length,1);assert.equal(p.cancels(),1);
+test('same button stops; another word replaces the audio; navigation stops native playback',()=>{
+ const p=setup(),a=p.button(),b=p.button();
+ p.pronounce('efficient',a);p.audio.onplaying();p.pronounce('efficient',a);
+ assert.equal(p.plays(),1);assert.match(p.status.textContent,/멈췄/);
  p.pronounce('efficient',a);p.pronounce('additional',b);
- assert.equal(p.cancels(),2);assert.equal(p.spoken.at(-1).text,'additional');
- p.spoken[1].onerror({error:'interrupted'});assert.equal(p.status.textContent,'');
- p.spoken.at(-1).onerror({error:'voice-unavailable'});assert.match(p.status.textContent,/재생하지 못/);
+ assert.equal(p.plays(),3);assert.match(p.audio.src,/additional/);
+ p.audio.onended();const before=p.pauses();p.stopPronunciation();assert.equal(p.pauses(),before+1);
 });
-test('missing voices use English language and unsupported browsers get an explanation',()=>{
- const p=setup();p.pronounce('word',button());assert.equal(p.spoken[0].lang,'en-US');
- const status={textContent:''};
- const api=runInNewContext(source+'\n({pronounce})',{window:{},$:()=>status});
- api.pronounce('word',button());assert.match(status.textContent,/이 브라우저/);
+test('blocked playback shows a usable native player and stale failures cannot overwrite a later choice',async()=>{
+ const p=setup({reject:true});p.pronounce('efficient',p.button());await Promise.resolve();
+ assert.match(p.status.textContent,/아래 재생 버튼/);assert.equal(p.panel.hidden,false);
+ p.pronounce('efficient',p.button());p.stopPronunciation();p.status.textContent='new state';await Promise.resolve();
+ assert.equal(p.status.textContent,'new state');
+});
+test('every vocabulary entry has a committed MP3',()=>{
+ const {words}=JSON.parse(readFileSync(new URL('../dist/words.json',import.meta.url)));
+ for(const word of words){
+  assert.match(word.audio,/^audio\/[a-z0-9-]+-[a-f0-9]{12}\.mp3$/);
+  const path=new URL('../dist/'+word.audio,import.meta.url);
+  assert.ok(existsSync(path),word.word);assert.ok(readFileSync(path).length>1000,word.word);
+ }
 });

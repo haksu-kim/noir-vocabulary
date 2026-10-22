@@ -16,7 +16,9 @@ test('published assets work together and source files stay untouched', async t =
   const engine = app.match(/from '\.\/(engine-[a-f0-9]+\.js)'/)[1];
   const words = app.match(/new URL\('\.\/(words-[a-f0-9]+\.json)'/)[1];
   assert.ok((await readFile(join(output, 'assets', engine), 'utf8')).includes('export function createQuiz'));
-  assert.equal(JSON.parse(await readFile(join(output, 'assets', words), 'utf8')).words.length, 183);
+  const vocabulary=JSON.parse(await readFile(join(output, 'assets', words), 'utf8')).words;
+  assert.equal(vocabulary.length,183);
+  for(const word of vocabulary) assert.deepEqual(await readFile(join(output,word.audio)),await readFile(join(source,word.audio)));
   assert.equal(await readFile(join(source, 'app.js'), 'utf8'), before);
   const html = await readFile(join(output, 'index.html'), 'utf8');
   assert.ok(html.includes("cache: 'no-store'"));

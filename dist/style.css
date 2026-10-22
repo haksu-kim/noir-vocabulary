@@ -27,3 +27,6 @@
 
 .table-row>.word-number{color:var(--gold);font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.5px}
 @media(max-width:650px){.table-row>.word-number{font-size:10px}}
+
+.library-word{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;min-width:0}.library-word strong{min-width:0;max-width:100%}.pronounce-button{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:44px;min-height:44px;padding:8px;color:var(--gold);border:1px solid #79866d;border-radius:6px;background:#252a20;flex-shrink:0}.pronounce-button svg{width:16px;height:16px}.pronounce-button span{font-size:10px;white-space:nowrap}.pronounce-button.is-speaking{background:var(--gold);border-color:var(--gold);color:#24271c}.pronounce-button:disabled{opacity:.45}.speech-status{font-size:12px;line-height:1.8;color:var(--gold);margin:0 0 14px}.speech-status:empty{display:none}
+@media(max-width:650px){.library-word{align-items:flex-start;flex-direction:column;gap:6px}.pronounce-button{padding:7px;gap:4px}.pronounce-button span{font-size:9px}}

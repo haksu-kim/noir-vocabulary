@@ -12,6 +12,7 @@ const icons = {
   spark:'<path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>',
   repeat:'<path d="m17 2 4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4m14-1v2a3 3 0 0 1-3 3H3"/>',
   search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+  volume:'<path d="m11 5-6 4H2v6h3l6 4V5Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
   clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'
 };
 const icon = name => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${icons[name] || icons.spark}</svg>`;
@@ -51,14 +52,63 @@ function renderResults() {
  const perfect=result.score===100;
  return `${heading('A MOMENT TO REFLECT.','오늘도 한 걸음 <em>앞으로.</em>','점수보다 중요한 건, 다시 기억해낸 단어 하나예요.')}<section class="results-card panel"><div class="score-ring" style="--score:${result.score}%"><div><span>ACCURACY</span><strong>${result.score}<small>%</small></strong><span>${perfect?'PERFECT SESSION':'KEEP GROWING'}</span></div></div><div class="result-summary"><div class="eyebrow">SESSION COMPLETE</div><h2>${perfect?'모든 단어를 기억했어요.':result.score>=70?'차곡차곡, 실력이 쌓이고 있어요.':'다시 만나면 더 오래 기억할 거예요.'}</h2><p>${result.total}개 중 <strong>${result.correct}개 정답</strong> <i>·</i> ${duration(result.elapsed)} 동안의 집중</p><div class="result-buttons">${result.wrong.length?`<button class="primary" data-action="retry-wrong">오답 ${result.wrong.length}개 다시 풀기 ${icon('repeat')}</button>`:`<button class="primary" data-action="start">한 번 더 도전 ${icon('arrow')}</button>`}<button class="secondary" data-action="home">새 시험 설정</button></div></div></section>${result.wrong.length?`<div class="section-heading"><h2>틀린 문제 확인</h2><span>${result.wrong.length} WORDS TO REVISIT</span></div><div class="review-list">${result.wrong.map(q=>`<div class="review-row"><span class="word-dot"></span><strong>${escape(q.word)}</strong><span>${escape(q.meaning)}<span class="review-answer">내 답: ${q.answer===null?'건너뜀':escape(q.answer)} · 정답: ${escape(q.correct)}</span></span><small>${q.answer===null?'건너뜀':'오답'}</small></div>`).join('')}</div>`:'<div class="perfect-note">'+icon('spark')+' 오늘의 단어가 전부 내 것이 되었어요.</div>'}`;
 }
+const speechSupported = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+let pronunciation = null;
+function stopPronunciation() {
+ const previous=pronunciation;
+ pronunciation=null;
+ if(previous){
+  previous.button.classList.remove('is-speaking');
+  previous.button.setAttribute('aria-pressed','false');
+  previous.button.setAttribute('aria-label',`${previous.word} 발음 듣기`);
+  window.speechSynthesis.cancel();
+ }
+}
+function pronounce(word,button) {
+ const status=$('#speech-status');
+ if(!speechSupported){if(status)status.textContent='이 브라우저에서는 발음을 재생할 수 없어요.';return;}
+ const same=pronunciation?.button===button;
+ stopPronunciation();
+ if(status)status.textContent='';
+ if(same)return;
+ try {
+  const utterance=new window.SpeechSynthesisUtterance(word);
+  const voices=window.speechSynthesis.getVoices();
+  const voice=voices.find(v=>/^en[-_]US$/i.test(v.lang)&&v.localService)
+   ||voices.find(v=>/^en[-_]US$/i.test(v.lang))||voices.find(v=>/^en(?:[-_]|$)/i.test(v.lang));
+  utterance.lang=voice?.lang||'en-US';
+  if(voice)utterance.voice=voice;
+  utterance.rate=0.85;
+  pronunciation={utterance,button,word};
+  button.classList.add('is-speaking');
+  button.setAttribute('aria-pressed','true');
+  button.setAttribute('aria-label',`${word} 발음 멈추기`);
+  const finish=()=>{
+   if(pronunciation?.utterance!==utterance)return false;
+   pronunciation=null;
+   button.classList.remove('is-speaking');
+   button.setAttribute('aria-pressed','false');
+   button.setAttribute('aria-label',`${word} 발음 듣기`);
+   return true;
+  };
+  utterance.onend=finish;
+  utterance.onerror=event=>{
+   if(finish()&&status&&!['canceled','interrupted'].includes(event.error))status.textContent='발음을 재생하지 못했어요. 기기의 소리 설정을 확인하고 다시 눌러 주세요.';
+  };
+  window.speechSynthesis.speak(utterance);
+ } catch {
+  stopPronunciation();
+  if(status)status.textContent='발음을 재생하지 못했어요. 다시 눌러 주세요.';
+ }
+}
 function libraryRows() {
  const query=search.trim().toLowerCase();
  const numbered=words.filter(w=>libraryDay==='all'||w.days.includes(libraryDay)).map((w,index)=>({...w,number:index+1}));
  const visible=numbered.filter(w=>(libraryFilter==='all'||saved.wrongIds.includes(w.id))&&(!query||w.word.toLowerCase().includes(query)||w.meaning.includes(query)));
- return `<div class="library-count">${libraryDay==='all'?'전체 DAY':libraryDay.replace('DAY','DAY ')} · ${visible.length}개의 단어 <span>영어 단어와 뜻으로 검색할 수 있어요</span></div><div class="word-table"><div class="table-head"><span>번호</span><span>WORD</span><span>MEANING</span><span>DAY</span><span>STATUS</span></div>${visible.length?visible.map(w=>`<div class="table-row"><span class="word-number" aria-label="${w.number}번">${String(w.number).padStart(2,'0')}</span><strong>${escape(w.word)}</strong><span>${escape(w.meaning)}</span><small>${w.days.map(d=>d.replace('DAY','')).join(' · ')}</small><span>${saved.wrongIds.includes(w.id)?'<span class="status-pill">복습 필요</span>':'<span class="muted">—</span>'}</span></div>`).join(''):'<div class="empty-state">'+icon('book')+'<h3>해당하는 단어가 없어요</h3><p>검색어를 바꾸거나 다른 범위를 선택해 보세요.</p></div>'}</div>`;
+ return `<div class="library-count">${libraryDay==='all'?'전체 DAY':libraryDay.replace('DAY','DAY ')} · ${visible.length}개의 단어 <span>영어 단어와 뜻으로 검색할 수 있어요</span></div><div class="word-table"><div class="table-head"><span>번호</span><span>WORD</span><span>MEANING</span><span>DAY</span><span>STATUS</span></div>${visible.length?visible.map(w=>`<div class="table-row"><span class="word-number" aria-label="${w.number}번">${String(w.number).padStart(2,'0')}</span><div class="library-word"><strong>${escape(w.word)}</strong><button type="button" class="pronounce-button" data-action="pronounce" data-word="${escape(w.word)}" aria-label="${escape(w.word)} 발음 듣기" aria-pressed="false" title="영어 발음 듣기" ${speechSupported?'':'disabled'}>${icon('volume')}<span>발음</span></button></div><span>${escape(w.meaning)}</span><small>${w.days.map(d=>d.replace('DAY','')).join(' · ')}</small><span>${saved.wrongIds.includes(w.id)?'<span class="status-pill">복습 필요</span>':'<span class="muted">—</span>'}</span></div>`).join(''):'<div class="empty-state">'+icon('book')+'<h3>해당하는 단어가 없어요</h3><p>검색어를 바꾸거나 다른 범위를 선택해 보세요.</p></div>'}</div>`;
 }
 function renderLibrary() {
- return `${heading('WORDS WORTH KEEPING.','하나씩, <em>내 것으로.</em>','DAY별로 단어를 살펴보고 복습할 단어를 확인하세요.')}<section class="panel library-panel"><div class="library-days" role="group" aria-label="단어장 DAY 선택">${['all',...DAYS].map(day=>`<button class="library-day ${libraryDay===day?'selected':''}" data-action="library-day" data-day="${day}" aria-pressed="${libraryDay===day}"><span>${day==='all'?'전체':day.replace('DAY','DAY ')}</span><small>${day==='all'?words.length:words.filter(w=>w.days.includes(day)).length}개</small></button>`).join('')}</div><div class="library-toolbar"><div class="segments"><button data-action="library-filter" data-filter="all" class="${libraryFilter==='all'?'selected':''}" aria-pressed="${libraryFilter==='all'}">전체 단어</button><button data-action="library-filter" data-filter="wrong" class="${libraryFilter==='wrong'?'selected':''}" aria-pressed="${libraryFilter==='wrong'}">오답장 <span>${saved.wrongIds.length}</span></button></div><label class="search-box">${icon('search')}<input id="word-search" type="search" placeholder="단어 또는 뜻 검색" aria-label="단어 또는 뜻 검색" value="${escape(search)}"></label></div><div id="library-rows">${libraryRows()}</div></section><p class="data-note">기존 단어장의 204개 항목을 중복 없이 정리했습니다. 명확한 철자 오류와 잘린 뜻은 학습용으로 교정했습니다.</p>`;
+ return `${heading('WORDS WORTH KEEPING.','하나씩, <em>내 것으로.</em>','DAY별로 단어를 살펴보고 복습할 단어를 확인하세요.')}<section class="panel library-panel"><div class="library-days" role="group" aria-label="단어장 DAY 선택">${['all',...DAYS].map(day=>`<button class="library-day ${libraryDay===day?'selected':''}" data-action="library-day" data-day="${day}" aria-pressed="${libraryDay===day}"><span>${day==='all'?'전체':day.replace('DAY','DAY ')}</span><small>${day==='all'?words.length:words.filter(w=>w.days.includes(day)).length}개</small></button>`).join('')}</div><div class="library-toolbar"><div class="segments"><button data-action="library-filter" data-filter="all" class="${libraryFilter==='all'?'selected':''}" aria-pressed="${libraryFilter==='all'}">전체 단어</button><button data-action="library-filter" data-filter="wrong" class="${libraryFilter==='wrong'?'selected':''}" aria-pressed="${libraryFilter==='wrong'}">오답장 <span>${saved.wrongIds.length}</span></button></div><label class="search-box">${icon('search')}<input id="word-search" type="search" placeholder="단어 또는 뜻 검색" aria-label="단어 또는 뜻 검색" value="${escape(search)}"></label></div><p id="speech-status" class="speech-status" role="status" aria-live="polite">${speechSupported?'':'이 브라우저에서는 발음을 재생할 수 없어요. 다른 브라우저에서 이용해 주세요.'}</p><div id="library-rows">${libraryRows()}</div></section><p class="data-note">기존 단어장의 204개 항목을 중복 없이 정리했습니다. 명확한 철자 오류와 잘린 뜻은 학습용으로 교정했습니다.</p>`;
 }
 function renderHistory() {
  return `${heading('YOUR PROGRESS, IN PAGES.','기록이 쌓이면,<br><em>변화가 보여요.</em>','작은 성취를 잊지 않도록. 이 브라우저에서 쌓아온 학습 기록입니다.')}<section class="panel history-panel"><div class="panel-heading"><h2>최근 학습 기록</h2><span class="number-label">${saved.history.length} SESSIONS</span></div>${saved.history.length?`<div class="history-list">${saved.history.map(h=>`<div class="history-row"><div class="history-icon">${icon(h.score===100?'spark':'check')}</div><div><strong>${escape(h.label)}</strong><span>${new Intl.DateTimeFormat('ko-KR',{month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(h.date))} <i>·</i> ${h.correct}/${h.total} 정답 <i>·</i> ${duration(h.elapsed)}</span></div><div class="mini-progress"><span style="width:${h.score}%"></span></div><strong class="history-score">${h.score}<small>%</small></strong></div>`).join('')}</div><p class="data-note">최근 50회까지 저장됩니다. 브라우저 데이터를 지우면 기록도 함께 지워집니다.</p>`:`<div class="empty-state">${icon('history')}<h3>아직 비어 있는 첫 페이지</h3><p>첫 시험을 마치면 오늘의 성취가 이곳에 남아요.</p><button class="primary" data-action="home">첫 기록 만들기 ${icon('arrow')}</button></div>`}</section>`;
@@ -69,6 +119,7 @@ function modalMarkup() {
  return `<div class="modal-backdrop"><section class="modal panel" role="dialog" aria-modal="true" aria-labelledby="modal-title"><span class="eyebrow">TAKE YOUR TIME</span><h2 id="modal-title">${exit?'잠시 쉬어갈까요?':'새 시험을 시작할까요?'}</h2><p>${exit?'진행 상황을 저장해 둘게요.<br>언제든 이어서 풀 수 있어요.':'진행 중인 시험은 새 시험으로 바뀝니다.<br>완료한 시험 기록은 그대로 남아요.'}</p><div><button class="secondary" data-action="modal-cancel">${exit?'계속 풀기':'취소'}</button><button class="primary" data-action="${exit?'save-exit':'replace-session'}">${exit?'저장하고 나가기':'새 시험 시작'}</button></div></section></div>`;
 }
 function render() {
+ stopPronunciation();
  $('#app').innerHTML=shell(view==='home'?renderHome():view==='quiz'?renderQuiz():view==='results'?renderResults():view==='library'?renderLibrary():renderHistory());
  document.title = `${view==='quiz'?`문제 ${session.index+1} · `:view==='results'?'시험 결과 · ':''}NOIR WORDS`;
  if(modal) $('.modal .secondary')?.focus();
@@ -103,6 +154,7 @@ $('#app').addEventListener('click', event=>{
  const button=event.target.closest('[data-action]'); if(!button || button.disabled)return;
  event.preventDefault();
  const action=button.dataset.action;
+ if(action==='pronounce'){pronounce(button.dataset.word,button);return;}
  if(action==='nav')return navigate(button.dataset.view);
  if(action==='home'){view='home';render();window.scrollTo({top:0});return;}
  if(action==='day'){selectedDays=selectedDays.includes(button.dataset.day)?selectedDays.filter(d=>d!==button.dataset.day):[...selectedDays,button.dataset.day];render();}
@@ -127,7 +179,7 @@ $('#app').addEventListener('click', event=>{
  else if(action==='library-filter'){libraryFilter=button.dataset.filter;render();}
  else if(action==='library-day'){libraryDay=button.dataset.day;render();}
 });
-$('#app').addEventListener('input',event=>{if(event.target.id==='word-search'){search=event.target.value;$('#library-rows').innerHTML=libraryRows();}});
+$('#app').addEventListener('input',event=>{if(event.target.id==='word-search'){stopPronunciation();search=event.target.value;$('#library-rows').innerHTML=libraryRows();}});
 document.addEventListener('keydown',event=>{
  if(modal){if(event.key==='Escape'){modal=null;render();}if(event.key==='Tab'){const buttons=[...document.querySelectorAll('.modal button')];if(event.shiftKey&&document.activeElement===buttons[0]){event.preventDefault();buttons.at(-1).focus();}else if(!event.shiftKey&&document.activeElement===buttons.at(-1)){event.preventDefault();buttons[0].focus();}}return;}
  if(view!=='quiz'||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)||event.ctrlKey||event.metaKey||event.altKey)return;
@@ -135,7 +187,7 @@ document.addEventListener('keydown',event=>{
  if(/^[1-4]$/.test(event.key)){event.preventDefault();if(!event.repeat)answer(q.choices[Number(event.key)-1]);}
  else if(q.answered&&event.key==='Enter'&&document.activeElement?.dataset.action!=='answer'){event.preventDefault();$('[data-action="next"]')?.click();}
 });
-window.addEventListener('pagehide',()=>{if(view==='quiz'&&session){session.elapsed=elapsed();session.startedAt=Date.now();saveSession();}});
+window.addEventListener('pagehide',()=>{stopPronunciation();if(view==='quiz'&&session){session.elapsed=elapsed();session.startedAt=Date.now();saveSession();}});
 setInterval(()=>{if(view==='quiz'&&$('#timer'))$('#timer').textContent=duration(elapsed());},1000);
 try {
  const response=await fetch('./words.json');if(!response.ok)throw Error('단어장 로딩 실패');data=await response.json();words=data.words;
